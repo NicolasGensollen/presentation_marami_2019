@@ -83,14 +83,14 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Full Title of the Talk} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[social and financial interactions]{Interplay between social and financial interactions in a crypto-currency } % The short title appears at the bottom of every slide, the full title is only on the title page
 
-\author{John Smith} % Your name
-\institute[UCLA] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+\author{\textbf{Nicolas Gensollen}, Matthieu Latapy} % Your name
+\institute[LIP6] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-University of California \\ % Your institution for the title page
+Laboratoire d'informatique de Paris 6 \\ % Your institution for the title page
 \medskip
-\textit{john@smith.com} % Your email address
+\textit{nicolas.gensollen@lip6.fr} % Your email address
 }
 \date{\today} % Date, can be changed to a custom date
 
@@ -110,143 +110,247 @@ University of California \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 %------------------------------------------------
-\section{First Section} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{Context} 
 %------------------------------------------------
 
-\subsection{Subsection Example} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
-
 \begin{frame}
-\frametitle{Paragraphs of Text}
-Sed iaculis dapibus gravida. Morbi sed tortor erat, nec interdum arcu. Sed id lorem lectus. Quisque viverra augue id sem ornare non aliquam nibh tristique. Aenean in ligula nisl. Nulla sed tellus ipsum. Donec vestibulum ligula non lorem vulputate fermentum accumsan neque mollis.\\~\\
+\frametitle{Context}
 
-Sed diam enim, sagittis nec condimentum sit amet, ullamcorper sit amet libero. Aliquam vel dui orci, a porta odio. Nullam id suscipit ipsum. Aenean lobortis commodo sem, ut commodo leo gravida vitae. Pellentesque vehicula ante iaculis arcu pretium rutrum eget sit amet purus. Integer ornare nulla quis neque ultrices lobortis. Vestibulum ultrices tincidunt libero, quis commodo erat ullamcorper id.
+\begin{center}
+{\huge \textbf{Context}}
+\end{center}
+
 \end{frame}
 
-%------------------------------------------------
+\subsection{Who are we?}
 
 \begin{frame}
-\frametitle{Bullet Points}
+\frametitle{Who we are and what we do}
+
+\textbf{Our team}
+
 \begin{itemize}
-\item Lorem ipsum dolor sit amet, consectetur adipiscing elit
-\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus eu
-\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-\item Nam cursus est eget velit posuere pellentesque
-\item Vestibulum faucibus velit a augue condimentum quis convallis nulla gravida
+\item Complex Networks team (LIP6).
+\item Internet measurements, random graphs, temporal networks
+\item Social network analysis, spreading phenomena, graph algorithms
 \end{itemize}
-\end{frame}
 
-%------------------------------------------------
+\bigskip
 
-\begin{frame}
-\frametitle{Blocks of Highlighted Text}
-\begin{block}{Block 1}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-\end{block}
+\textbf{Our main research topics}
 
-\begin{block}{Block 2}
-Pellentesque sed tellus purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum quis magna at risus dictum tempor eu vitae velit.
-\end{block}
+\bigskip
 
-\begin{block}{Block 3}
-Suspendisse tincidunt sagittis gravida. Curabitur condimentum, enim sed venenatis rutrum, ipsum neque consectetur orci, sed blandit justo nisi ac lacus.
-\end{block}
-\end{frame}
+\begin{columns}[t]
 
-%------------------------------------------------
+\column{.4\textwidth} % Left column and width
+\textbf{Stream Graphs}
 
-\begin{frame}
-\frametitle{Multiple Columns}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\begin{figure}
+\includegraphics[width=0.8\linewidth]{./figures/stream_graph}
+\end{figure}
 
-\column{.45\textwidth} % Left column and width
-\textbf{Heading}
-\begin{enumerate}
-\item Statement
-\item Explanation
-\item Example
-\end{enumerate}
+\column{.6\textwidth} % Right column and width
+\textbf{Anomaly detection}
 
-\column{.5\textwidth} % Right column and width
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+\begin{figure}
+\includegraphics[width=\linewidth]{./figures/anomalie_detection}
+\end{figure}
 
 \end{columns}
+
+
 \end{frame}
 
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
-
-\begin{frame}
-\frametitle{Table}
-\begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\end{table}
-\end{frame}
+\subsection{The G1 crypto-currency}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}
+\frametitle{The G1 crypto-currency}
 
-%------------------------------------------------
+\begin{columns}[c]
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Verbatim}
-\begin{example}[Theorem Slide Code]
-\begin{verbatim}
-\begin{frame}
-\frametitle{Theorem}
-\begin{theorem}[Mass--energy equivalence]
-$E = mc^2$
-\end{theorem}
-\end{frame}\end{verbatim}
-\end{example}
+\column{.7\textwidth}
+
+\begin{itemize}
+\item Created in 2017 in France
+\item \textbf{Particularity:} first "\textit{libre}" crypto-currency
+\item \textbf{Spatial} and \textbf{Temporal} symmetry principles
+\end{itemize}
+
+\column{.3\textwidth}
+\begin{figure}
+\includegraphics[width=.5\linewidth]{./figures/g1_logo}
+\end{figure}
+
+\end{columns}
+
+\bigskip
+
+\begin{itemize}
+\item \textbf{Monetary creation} is \textbf{automatic} and \textbf{divided equally} among the members\footnote{Relative Theory of Money, \textit{https://en.trm.creationmonetaire.info/}}
+\item Each member receives one \textit{Universal Dividend} every day
+\end{itemize}
+
+
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{Figure}
-Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-%\begin{figure}
-%\includegraphics[width=0.8\linewidth]{test}
-%\end{figure}
-\end{frame}
+\frametitle{The G1 crypto-currency}
 
-%------------------------------------------------
+\begin{figure}
+\includegraphics[width=\linewidth]{./figures/g1_evolution}
+\caption{\textbf{Left -} Evolution of the monetary mass. \textbf{Right -} Evolution of the number of members. Source: Cesium client (\textit{https://g1.duniter.fr/\#/app/currency/lg})}
+\end{figure}
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-\frametitle{Citation}
-An example of the \verb|\cite| command to cite within the presentation:\\~
+\smallskip
 
-This statement requires citation \cite{p1}.
+\textbf{Some numbers (Oct. 2019)}
+
+\begin{columns}[c]
+
+\column{.5\textwidth}
+\begin{itemize}
+\item About 2300 identified members.
+\item $UD \simeq 10\ \tilde{G}1\ /\ day$ .
+\end{itemize}
+
+\column{.5\textwidth}
+\begin{itemize}
+\item Monetary growth: $0.22\%\ /\ day$.
+\item Monetary mass per member: $4600 \tilde{G}1 $.
+\end{itemize}
+\end{columns}
+
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-\frametitle{References}
-\footnotesize{
-\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
-\bibitem[Smith, 2012]{p1} John Smith (2012)
-\newblock Title of the publication
-\newblock \emph{Journal Name} 12(3), 45 -- 678.
-\end{thebibliography}
-}
+\frametitle{The G1 crypto-currency}
+
+\begin{columns}[c]
+
+\column{.5\textwidth}
+\begin{itemize}
+\item Identities of members are a key concern!
+\item \textbf{1 member = 1 real living human being}
+\item Members are identified through a \textit{Web of Trust} (WoT) mechanism
+\end{itemize}
+\column{.5\textwidth}
+\begin{figure}
+\includegraphics[width=.7\linewidth]{./figures/wot}
+\end{figure}
+\end{columns}
+
+\begin{itemize}
+\item Member accounts are different from regular accounts.
+\item Safety rules are constraining its growth
+\item Examples:
+\begin{itemize}
+\item A new member has to receive at least 5 certifications
+\item All members should be close enough to \textit{sentinel members}
+\end{itemize}
+\end{itemize}
+
+
 \end{frame}
+
+\subsection{Objectives of this work}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Objectives of this work}
+
+\begin{itemize}
+\item We can extract from the blockchain a stream of transactions $\mathcal{T}$ and a stream of certifications $\mathcal{C}$.
+\item A transaction $\left(t,u,v,a\right) \in \mathcal{T}$: \textit{Entity $u$ sends amount $a$ to entity $v$ at time $t$}.
+\item A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies the identity of members $v$ at time $t$}.
+\item We have a dynamic network of social ties and financial transactions between identified human beings!
+\end{itemize}
+
+\medskip
+
+\textbf{Unique dataset to study the interplay between money exchange and social ties.}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Approach and basic results}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Approach and basic results}
+
+\begin{center}
+{\huge \textbf{Approach and basic results}}
+\end{center}
+
+\end{frame}
+
+\subsection{Approach}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Approach}
+
+\begin{figure}
+\includegraphics[width=.8\linewidth]{./figures/stream_graph_signal}
+\end{figure}
+
+\begin{itemize}
+\item The data is best modeled by stream graphs
+\item Start with simpler models (timeseries and graphs) to gain insight
+\item Then use stream graphs to capture more complex dependencies
+\end{itemize}
+
+\end{frame}
+
+\subsection{Basic Results}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Activity}
+
+\begin{block}{Activity of a stream}
+We can define the \textit{activity} of a stream $S$ as the time serie of the number of links.
+\end{block}
+
+\bigskip
+
+\begin{figure}
+\includegraphics[width=.8\linewidth]{./figures/activity}
+\caption{30 days rolling sum of the activities of $ \mathcal{C}$ (red curve) and $\mathcal{T}$ (blue curve).}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Induced Graphs}
+
+\begin{block}{Graph induced by a stream}
+The graph induced by a stream $S = \left(T, V, W, E \right)$ is a static graph $ G \left(S \right) = \left(V, \bar{E} \right)$ in which two nodes are linked if they interacted at least once in the stream, i.e. $ \bar{E} = \left\{ \left( u, v \right),\ \exists \left(t, uv \right) \in E \right\}$.
+\end{block}
+
+\bigskip
+
+\begin{figure}
+\includegraphics[width=.9\linewidth]{./figures/degree_distribution}
+\caption{\textbf{Left -} In-degree (in blue) and out-degree (in red) distributions of $G \left( \mathcal{C} \right)$. \textbf{Right -} In-degree (in blue) and out-degree (in red) distributions of $G \left( \mathcal{T} \right)$.}
+\end{figure}
+
+\end{frame}
+
 
 %------------------------------------------------
 
