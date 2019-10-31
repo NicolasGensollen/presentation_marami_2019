@@ -110,7 +110,6 @@ Laboratoire d'informatique de Paris 6 \\ % Your institution for the title page
 %----------------------------------------------------------------------------------------
 
 
-
 %------------------------------------------------
 \section{Context} 
 %------------------------------------------------
@@ -125,28 +124,36 @@ Laboratoire d'informatique de Paris 6 \\ % Your institution for the title page
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Who we are and what we do}
-	\textbf{Our team}
-	\begin{itemize}
-		\item Complex Networks team (LIP6).
-		\item Internet measurements, random graphs, temporal networks
-		\item Social network analysis, spreading phenomena, graph algorithms
-	\end{itemize}
-	\bigskip
-	\textbf{Our main research topics}
-	\bigskip
-	\begin{columns}[t]
-		\column{.4\textwidth} % Left column and width
-		\textbf{Stream Graphs}
+	\frametitle{\textbf{Who} we are and \textbf{what} we do}
+	\only<1>{{\Large \textbf{The team}}}
+	\onslide<2-3>{{\Large \textbf{Our main research topics}}}
+	\only<2>{\\ \bigskip \textbf{Stream Graphs}}
+	\only<3>{\\ \bigskip \textbf{Anomaly detection}}
+	\begin{center}
+		\only<1>{
+		\begin{itemize}
+			\item \textit{Complex Networks} team (LIP6).
+			\item Internet measurements, random graphs, temporal networks
+			\item Social network analysis, spreading phenomena, graph algorithms
+		\end{itemize}
+		\bigskip
 		\begin{figure}
-			\includegraphics[width=0.8\linewidth]{./figures/stream_graph}
+			\includegraphics[width=\linewidth]{./figures/header}
+		\end{figure}	
+		}
+		\only<2>{
+		\bigskip
+		\begin{figure}
+			\includegraphics[width=.8\linewidth]{./figures/stream_graph}
 		\end{figure}
-		\column{.6\textwidth} % Right column and width
-		\textbf{Anomaly detection}
+		}
+		\only<3>{
+		\bigskip
 		\begin{figure}
 			\includegraphics[width=\linewidth]{./figures/anomalie_detection}
 		\end{figure}
-	\end{columns}
+		}
+	\end{center}
 \end{frame}
 
 
@@ -157,73 +164,30 @@ Laboratoire d'informatique de Paris 6 \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{The G1 crypto-currency}
 	\begin{columns}[c]
-		\column{.7\textwidth}
+		\column{.7\linewidth}
 		\begin{itemize}
-			\item Created in 2017 in France
-			\item \textbf{Particularity:} first "\textit{libre}" crypto-currency
-			\item \textbf{Spatial} and \textbf{Temporal} symmetry principles
+			\item<1-> Created in 2017 in France
+			\item<1-> \textit{https://g1.duniter.fr/\#/app/currency/lg}
+			\item<2-> Has a lot of 
+particularities
+			\item<3-> Two types of accounts: \textit{"members"} and \textit{"anonymous"}
+			\item<4-> About 2300 identified members (Oct. 2019)
+			\item<5-> \textbf{1 member = 1 real living human being}
+			\item<6-> Members are identified through a \textit{Web of Trust} (WoT) mechanism
+			\item<7-> A link in the WoT = a \textit{certification}
 		\end{itemize}
-		\column{.3\textwidth}
-		\begin{figure}
-			\includegraphics[width=.5\linewidth]{./figures/g1_logo}
-		\end{figure}
-	\end{columns}
-	\bigskip
-	\begin{itemize}
-		\item \textbf{Monetary creation} is \textbf{automatic} and \textbf{divided equally} among the members\footnote{Relative Theory of Money, \textit{https://en.trm.creationmonetaire.info/}}
-		\item Each member receives one \textit{Universal Dividend} every day
-	\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{The G1 crypto-currency}
-	\begin{figure}
-		\includegraphics[width=\linewidth]{./figures/g1_evolution}
-		\caption{\textbf{Left -} Evolution of the monetary mass. \textbf{Right -} Evolution of the number of members. Source: Cesium client (\textit{https://g1.duniter.fr/\#/app/currency/lg})}
-	\end{figure}
-	\smallskip
-	\textbf{Some numbers (Oct. 2019)}
-	\begin{columns}[c]
-		\column{.5\textwidth}
-		\begin{itemize}
-			\item About 2300 identified members.
-			\item $UD \simeq 10\ \tilde{G}1\ /\ day$ .
-		\end{itemize}
-		\column{.5\textwidth}
-		\begin{itemize}
-			\item Monetary growth: $0.22\%\ /\ day$.
-			\item Monetary mass per member: $4600 \tilde{G}1 $.
-		\end{itemize}
-	\end{columns}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{The G1 crypto-currency}
-	\begin{columns}[c]
-		\column{.5\textwidth}
-		\begin{itemize}
-			\item Identities of members are a key concern!
-			\item \textbf{1 member = 1 real living human being}
-			\item Members are identified through a \textit{Web of Trust} (WoT) mechanism
-		\end{itemize}
-		\column{.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=.7\linewidth]{./figures/wot}
-		\end{figure}
-	\end{columns}
-	\begin{itemize}
-		\item Member accounts are different from regular accounts.
-		\item Safety rules are constraining its growth
-		\item Examples:
-		\begin{itemize}
-			\item A new member has to receive at least 5 certifications
-			\item All members should be close enough to 				\textit{sentinel members}
-		\end{itemize}
-	\end{itemize}
+		\column{.3\linewidth}
+			\begin{figure}
+				\includegraphics[width=.5\linewidth]{./figures/g1_logo}
+			\end{figure}
+			\onslide<6->{
+				\begin{figure}
+					\includegraphics[width=.7\linewidth]{./figures/wot}
+				\end{figure}}
+		\end{columns}
+		\only<8>{
+		\bigskip
+		\textbf{We have a dynamic network of social ties and financial transactions between identified human beings!}}	
 \end{frame}
 
 
@@ -234,45 +198,97 @@ Laboratoire d'informatique de Paris 6 \\ % Your institution for the title page
 \begin{frame}
 	\frametitle{Objectives of this work}
 	\begin{itemize}
-		\item We can extract from the blockchain a stream of transactions $\mathcal{T}$ and a stream of certifications $\mathcal{C}$.
-		\item A transaction $\left(t,u,v,a\right) \in \mathcal{T}$: \textit{Entity $u$ sends amount $a$ to entity $v$ at time $t$}.
-		\item A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies the identity of members $v$ at time $t$}.
-		\item We have a dynamic network of social ties and financial transactions between identified human beings!
+		\item<1-> Study the interplay between transactions and social ties
+		\item<2-> Are my transaction partners the same
+as my friends?
+		\item<3-> Do transactions precede social ties or vice-versa?
+		\item<4-> How do my friends exchange between them compared to my transaction partners?
+		\item<5-> Are my friends and transaction partners more and more homogeneous over time?
+		\item<6-> \textbf{Show how stream graphs can be used to gain insight on such questions}	 
 	\end{itemize}
-	\medskip
-	\textbf{Unique dataset to study the interplay between money exchange and social ties.}
 \end{frame}
 
 
 
 %------------------------------------------------
-\section{Approach and basic results}
+\section{Approach}
 %------------------------------------------------
 
 \begin{frame}
-	\Huge{\centerline{Approach and basic results}}
+	\Huge{\centerline{Approach}}
 \end{frame}
 
-
 %------------------------------------------------
-\subsection{Approach}
+
+\begin{frame}
+	\frametitle{What does the \textbf{data} look like?}
+	\begin{itemize}
+		\item<1-> Extract from the blockchain a stream of transactions $\mathcal{T}$ and a stream of certifications $\mathcal{C}$.
+		\item<2-> A transaction $\left(t,u,v,a\right) \in \mathcal{T}$: \textit{Entity $u$ sends amount $a$ to entity $v$ at time $t$}.
+		\item<3-> A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies the identity of members $v$ at time $t$}.
+	\end{itemize}
+\end{frame}
+
 %------------------------------------------------
 
 \begin{frame}
 	\frametitle{Approach}
-	\begin{figure}
-		\includegraphics[width=.8\linewidth]{./figures/stream_graph_signal}
-	\end{figure}
-	\begin{itemize}
-		\item The data is best modeled by stream graphs
-		\item Start with simpler models (timeseries and graphs) to gain insight
-		\item Then use stream graphs to capture more complex dependencies
-	\end{itemize}
+	\only<1>{data: sequence of $\left(t,u,v\right)$}
+	\only<2>{Aggregate interactions: lose structure}
+	\only<3>{Aggregate time: lose dynamics/ordering}
+	\only<4>{Other \textit{"in-between"} approaches also have drawbacks...}
+	\only<5>{Solution: Model keeping both structure and time: \textbf{Stream Graphs}!}
+	\begin{center}
+		\begin{figure}
+			\only<1>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_stream_only.png}}
+			\only<2>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_signal_only.png}}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_graph_only.png}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_final}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Stream Graphs}
+	\begin{center}
+		\only<1>{$ S = \left(T,V,W,E\right) $}
+		\only<2>{$T$: Set of time instants}
+		\only<3>{$V$: Set of nodes}
+		\only<4>{$W \subseteq T \times V$: Set of temporal nodes}
+		\only<5>{$E \subseteq T \times V \otimes V$: Set of link}
+		\begin{figure}
+			\only<1>{\includegraphics[width=.9\linewidth]{./figures/stream_graph}}
+			\only<2>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_T}}
+			\only<3>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_V}}
+			\only<4>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_W}}
+			\only<5>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_E}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Why is this useful?}	
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=.8\linewidth]{./figures/stream_unification}
+		\end{figure}
+	\end{center}
 \end{frame}
 
 
 %------------------------------------------------
-\subsection{Basic Results}
+\section{Results}
+%------------------------------------------------
+
+\begin{frame}
+	\Huge{\centerline{Results}}
+\end{frame}
+
 %------------------------------------------------
 
 \begin{frame}
@@ -301,15 +317,34 @@ We can define the \textit{activity} of a stream $S$ as the time serie of the num
 	\end{figure}
 \end{frame}
 
-
-
-%------------------------------------------------
-\section{Certifications and Transactions}
 %------------------------------------------------
 
 \begin{frame}
-	\Huge{\centerline{Certifications and Transactions}}
+	\frametitle{Time between certifications and transactions}
+	\begin{center}
+		\begin{figure}
+			\only<1>{\includegraphics[width=.9\linewidth]{./figures/delta-t-0.png}}
+			\only<2>{\includegraphics[width=.9\linewidth]{./figures/delta-t-1.png}}
+			\only<3>{\includegraphics[width=.9\linewidth]{./figures/delta-t-2.png}}
+			\only<4>{\includegraphics[width=.9\linewidth]{./figures/delta-t-3.png}}
+		\end{figure}
+	\end{center}
 \end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Time between transactions and certifications}
+	\begin{center}
+		\begin{figure}
+			\only<1>{\includegraphics[width=.9\linewidth]{./figures/delta-t-0.png}}
+			\only<2>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-1.png}}
+			\only<3>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-2.png}}
+			\only<4>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-3.png}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
 
 %------------------------------------------------
 
@@ -323,6 +358,56 @@ We can define the \textit{activity} of a stream $S$ as the time serie of the num
 %------------------------------------------------
 
 \begin{frame}
+	\frametitle{Neighborhoods}
+	\begin{block}{Neighborhoods}
+		In a stream graph $S = \left(T, V, W, E \right)$ the neighborhood of node $ v \in V$, is the following cluster: 				 \[\mathcal{N}_S \left(v \right) = \left\{ \left(t, u \right),\  \left(t, uv \right) \in E \right\} \]
+		We also define the neighborhood of the induced graph $ G \left(S \right)$: 
+		\[ \bar{\mathcal{N}}_{S} \left(v \right) = \left\{ u \in V,\ \exists \left(t, uv \right) \in E \right\} \]
+	\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Neighborhoods}
+	\begin{figure}
+		\includegraphics[width=\linewidth]{./figures/neighborhoods}
+		\caption{Distributions of the Jaccard coefficient (in blue) and the Overlap coefficient (in red) between \textbf{Left -} the nodes’ transaction neighborhoods $\mathcal{N̄}_{\mathcal{T}} \left(u \right)$ and certification neighborhoods $\mathcal{N̄}_{\mathcal{C}} \left(u \right)$ \textbf{Right -} the edges within these neighborhoods.}
+	\end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{\textbf{K-Closures} - Ex: 2-closure}
+	\begin{center}
+		\begin{figure}
+			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
+			\only<2>{\includegraphics[width=\linewidth]{./figures/2-closure-1}}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/2-closure-2}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/2-closure-3}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{\textbf{K-Closures} - Ex: 3-closure}
+	\begin{center}
+		\begin{figure}
+			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
+			\only<2>{\includegraphics[width=\linewidth]{./figures/2-closure-1}}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/3-closure-2}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/3-closure-3}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/3-closure-4}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
 	\frametitle{K-Closures}
 	\begin{figure}
 		\includegraphics[width=\linewidth]{./figures/triadic_closure}
@@ -330,11 +415,10 @@ We can define the \textit{activity} of a stream $S$ as the time serie of the num
 	\end{figure}
 \end{frame}
 
-
 %------------------------------------------------
 
 \begin{frame}
-	\Huge{\centerline{The End}}
+	\Huge{\centerline{Questions?}}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
