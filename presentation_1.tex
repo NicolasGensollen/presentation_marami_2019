@@ -168,9 +168,9 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\frametitle{The G1 crypto-currency}
 	\onslide<1->{\textbf{Enables transactions between members}}
 	\medskip
-	\onslide<2->{\\{\small A transaction $\left(t,u,v\right) \in \mathcal{T}$: \textit{Entity $u$ sends money to entity $v$ at time $t$}.}}
-	\bigskip
+	\onslide<2->{\\{\small A transaction $\left(t,u,v\right) $: \textit{Entity $u$ sends money to entity $v$ at time $t$}.\\Transaction link stream: $ \mathcal{T} = \left( T, V, E_{\mathcal{T}} \right) $}}
 	\only<3>{
+	\bigskip
 	\begin{center}
 		\begin{figure}
 			\includegraphics[width=\linewidth]{./figures/transaction}
@@ -184,7 +184,7 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\frametitle{The G1 crypto-currency}
 	\onslide<1->{\textbf{Identification of the members with a Web of Trust}}
 	\medskip
-	\onslide<2->{\\{\small A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies identity of members $v$ at time $t$}.}}
+	\onslide<2->{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of members $v$ at time $t$}.\\Transaction link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
 	\bigskip
 	\only<3>{
 	\begin{center}
@@ -202,100 +202,6 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\begin{center}
 		\begin{figure}
 			\includegraphics[width=.8\linewidth]{./figures/delta-t-0}
-		\end{figure}
-	\end{center}
-\end{frame}
-
-
-%------------------------------------------------
-\subsection{Objectives of this work}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Objectives of this work}
-	\begin{itemize}
-		\item<1-> Study the interplay between transactions and social ties
-		\item<2-> Are my transaction partners the same
-as my friends?
-		\item<3-> Do transactions precede social ties or vice-versa?
-		\item<4-> How do my friends exchange between them compared to my transaction partners?
-		\item<5-> Are my friends and transaction partners more and more homogeneous over time?
-		\item<6-> \textbf{Show how stream graphs can be used to gain insight on such questions}	 
-	\end{itemize}
-\end{frame}
-
-
-
-%------------------------------------------------
-\section{Approach}
-%------------------------------------------------
-
-\begin{frame}
-	\Huge{\centerline{Approach}}
-\end{frame}
-
-%------------------------------------------------
-\subsection{Data}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{What does the \textbf{data} look like?}
-	\begin{itemize}
-		\item<1-> Extract from the blockchain a stream of transactions $\mathcal{T}$ and a stream of certifications $\mathcal{C}$.
-		\item<2-> A transaction $\left(t,u,v,a\right) \in \mathcal{T}$: \textit{Entity $u$ sends amount $a$ to entity $v$ at time $t$}.
-		\item<3-> A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies the identity of members $v$ at time $t$}.
-	\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\subsection{Stream Graphs}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Approach}
-	\only<1>{data: sequence of $\left(t,u,v\right)$}
-	\only<2>{Aggregate interactions: lose structure}
-	\only<3>{Aggregate time: lose dynamics/ordering}
-	\only<4>{Other \textit{"in-between"} approaches also have drawbacks...}
-	\only<5>{Solution: Model keeping both structure and time: \textbf{Stream Graphs}!}
-	\begin{center}
-		\begin{figure}
-			\only<1>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_stream_only.png}}
-			\only<2>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_signal_only.png}}
-			\only<3>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_graph_only.png}}
-			\only<4>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal}}
-			\only<5>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_final}}
-		\end{figure}
-	\end{center}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Stream Graphs}
-	\begin{center}
-		\only<1>{$ S = \left(T,V,W,E\right) $}
-		\only<2>{$T$: Set of time instants}
-		\only<3>{$V$: Set of nodes}
-		\only<4>{$W \subseteq T \times V$: Set of temporal nodes}
-		\only<5>{$E \subseteq T \times V \otimes V$: Set of link}
-		\begin{figure}
-			\only<1>{\includegraphics[width=.9\linewidth]{./figures/stream_graph}}
-			\only<2>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_T}}
-			\only<3>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_V}}
-			\only<4>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_W}}
-			\only<5>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_E}}
-		\end{figure}
-	\end{center}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Why is this useful?}	
-	\begin{center}
-		\begin{figure}
-			\includegraphics[width=.8\linewidth]{./figures/stream_unification}
 		\end{figure}
 	\end{center}
 \end{frame}
