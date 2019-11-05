@@ -168,14 +168,65 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\frametitle{The G1 crypto-currency}
 	\onslide<1->{\textbf{Enables transactions between members}}
 	\medskip
-	\onslide<2->{\\{\small A transaction $\left(t,u,v\right) $: \textit{Entity $u$ sends money to entity $v$ at time $t$}.\\Transaction link stream: $ \mathcal{T} = \left( T, V, E_{\mathcal{T}} \right) $}}
+	\only<2>{\\{\small A transaction $\left(t,u,v\right) $: \textit{Entity $u$ sends money to entity $v$ at time $t$}.\\Transaction link stream: $ \mathcal{T} = \left( T, V, E_{\mathcal{T}} \right) $}}
 	\only<3>{
-	\bigskip
+		\begin{center}
+			$T = \left[0,5\right]$, $V = \left\{a,b,c,d\right\}$
+		\end{center}
+	}
+	\only<4>{
+		\begin{center}
+			No dynamics on the nodes
+		\end{center}
+	}
+	\only<5>{
+		\begin{center}
+			$\left(0,c,b\right)$
+		\end{center}
+	}
+	\only<6>{
+		\begin{center}
+			$\left(1,a,b\right),\left(1,d,c\right)$
+		\end{center}
+	}
+	\only<7>{
+		\begin{center}
+			$\left(2,d,a\right)$
+		\end{center}
+	}
+	\only<8>{
+		\begin{center}
+			$\left(4,a,d\right),\left(4,b,a\right)$
+		\end{center}
+	}
+	\only<9>{
+		\begin{center}
+			$\left(5,b,a\right),\left(5,b,c\right)$
+		\end{center}
+	}
+	\only<10>{
+		\begin{center}
+			$E_{\mathcal{T},1}=\left\{ \left(a,b\right), \left(d,c\right) \right\}$
+		\end{center}
+	}
+	\only<11>{
+		\begin{center}
+			$E_{\mathcal{T},3}=\emptyset$
+		\end{center}
+	}
 	\begin{center}
 		\begin{figure}
-			\includegraphics[width=\linewidth]{./figures/transaction}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-0}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-1}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-2}}
+			\only<6>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-3}}
+			\only<7>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-4}}
+			\only<8>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-5}}
+			\only<9>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-6}}
+			\only<10>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-7}}
+			\only<11>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-8}}
 		\end{figure}
-	\end{center}}	
+	\end{center}
 \end{frame}
 
 %------------------------------------------------
@@ -184,14 +235,89 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\frametitle{The G1 crypto-currency}
 	\onslide<1->{\textbf{Identification of the members with a Web of Trust}}
 	\medskip
-	\onslide<2->{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of members $v$ at time $t$}.\\Transaction link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
-	\bigskip
+	\only<2>{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of members $v$ at time $t$}.\\Transaction link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
 	\only<3>{
+		\begin{center}
+			$T = \left[0,5\right]$, $V = \left\{a,b,c,d\right\}$
+		\end{center}
+	}
+	\only<4>{
+		\begin{columns}
+		\column{.5\textwidth}
+			\begin{center}
+				$\left(0,b,c\right)$
+			\end{center}
+		\column{.5\textwidth}
+			\begin{center}
+				\begin{figure}
+					\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-1}
+				\end{figure}
+			\end{center}
+		\end{columns}
+	}
+	\only<5>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(2,a,b\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-2}
+			\end{figure}
+		\end{center}
+	\end{columns}
+	}
+	\only<6>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(3,d,a\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-3}
+			\end{figure}
+		\end{center}
+	\end{columns}
+	}
+	\only<7>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(4,d,c\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-4}
+			\end{figure}
+		\end{center}
+	\end{columns}
+		}
+	\only<8>{
+		\begin{center}
+			$E_{\mathcal{C},1}=\left\{ \left(b,c\right) \right\}$
+		\end{center}
+	}
+	\only<9>{
+		\begin{center}
+			$E_{\mathcal{C},5}=\left\{ \left(b,c\right),\left(a,b\right),\left(d,a\right),\left(d,c\right)\right\}$
+		\end{center}
+	}
 	\begin{center}
 		\begin{figure}
-			\includegraphics[width=\linewidth]{./figures/certification}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-0}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-1}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-2}}
+			\only<6>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-3}}
+			\only<7>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-4}}
+			\only<8>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-5}}
+			\only<9>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-6}}
 		\end{figure}
-	\end{center}}	
+	\end{center}	
 \end{frame}
 
 %------------------------------------------------
