@@ -161,11 +161,11 @@ MARAMI 2019 - Dijon - France} % Your email address
 
 
 %------------------------------------------------
-\subsection{The G1 crypto-currency}
+\subsection{The $\tilde{G}1$ crypto-currency}
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{The G1 crypto-currency}
+	\frametitle{The $\tilde{G}1$ crypto-currency - \textbf{Transactions}}
 	\onslide<1->{\textbf{Enables transactions between members}}
 	\medskip
 	\only<2>{\\{\small A transaction $\left(t,u,v\right) $: \textit{Entity $u$ sends money to entity $v$ at time $t$}.\\Transaction link stream: $ \mathcal{T} = \left( T, V, E_{\mathcal{T}} \right) $}}
@@ -232,10 +232,10 @@ MARAMI 2019 - Dijon - France} % Your email address
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{The G1 crypto-currency}
-	\onslide<1->{\textbf{Identification of the members with a Web of Trust}}
+	\frametitle{The $\tilde{G}1$ crypto-currency - \textbf{Certifications}}
+	\onslide<1->{\textbf{Identification of the members with a Web of Trust mechanism}}
 	\medskip
-	\only<2>{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of members $v$ at time $t$}.\\Transaction link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
+	\only<2>{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of member $v$ at time $t$}.\\Certification link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
 	\only<3>{
 		\begin{center}
 			$T = \left[0,5\right]$, $V = \left\{a,b,c,d\right\}$
@@ -324,7 +324,7 @@ MARAMI 2019 - Dijon - France} % Your email address
 
 \begin{frame}
 	\frametitle{Why is this great?}
-	\textbf{{\footnotesize We have a dynamic network of social ties and financial transactions between identified human beings!}}
+	{\footnotesize We have a dynamic network of \textbf{social ties} and \textbf{financial transactions} between \textbf{identified human beings}!}
 	\begin{center}
 		\begin{figure}
 			\includegraphics[width=.8\linewidth]{./figures/animation_dt/deltat-certif-0.png}
@@ -432,7 +432,7 @@ MARAMI 2019 - Dijon - France} % Your email address
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Reciprocity - \textbf{K-Closures} - Ex: 2-closure}
+	\frametitle{Reciprocity - \textbf{K-Closures} of links - Ex: 2-closure}
 	\begin{center}
 		\begin{figure}
 			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
@@ -446,7 +446,7 @@ MARAMI 2019 - Dijon - France} % Your email address
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Reciprocity - \textbf{K-Closures} - Ex: 3-closure}
+	\frametitle{Reciprocity - \textbf{K-Closures} of links - Ex: 3-closure}
 	\begin{center}
 		\begin{figure}
 			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
@@ -474,16 +474,15 @@ MARAMI 2019 - Dijon - France} % Your email address
 \begin{frame}
 	\frametitle{Conclusion and Takeaways}
 	\begin{itemize}
-		\item G1 offers a unique dataset to study the interplay between social ties and transactions
-		\item The data is naturally well modeled by stream graphs
+		\item $\tilde{G}1$ offers a \textbf{unique dataset} to study the interplay between \textbf{social ties and transactions}
+		\item The data is naturally well modeled by \textbf{stream graphs}
 	\end{itemize}
 	\medskip
 	\begin{itemize}
 		\item Members tend to certify people they never make transactions with
 		\item But they tend to make transactions with people they are socially connected to
 		\item When an interaction occurs in both streams, there is a clear time proximity
-		\item People tend to certify back quickly
-		\item Money tend to cycle fast
+		\item Interactions tend to become reciprocal in short periods of time
 	\end{itemize}
 \end{frame}
 
