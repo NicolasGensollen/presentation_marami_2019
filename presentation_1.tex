@@ -130,7 +130,7 @@ MARAMI 2019 - Dijon - France} % Your email address
 	\frametitle{\textbf{Who} we are and \textbf{what} we do}
 	\only<1>{{\Large \textbf{The team}}}
 	\onslide<2-3>{{\Large \textbf{Our main research topics}}}
-	\only<2>{\\ \bigskip \textbf{Stream Graphs}}
+	\only<2>{\\ \bigskip \textbf{Stream Graphs} \footnote{{\footnotesize \textit{Stream Graphs and Link Streams for the Modeling of Interactions over Time} Matthieu Latapy, Tiphaine Viard and Clémence Magnien Social Networks Analysis and Mining, 8: 61, 2018}}}
 	\only<3>{\\ \bigskip \textbf{Anomaly detection}}
 	\begin{center}
 		\only<1>{
@@ -161,128 +161,173 @@ MARAMI 2019 - Dijon - France} % Your email address
 
 
 %------------------------------------------------
-\subsection{The G1 crypto-currency}
+\subsection{The $\tilde{G}1$ crypto-currency}
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{The G1 crypto-currency}
-	\begin{columns}[c]
-		\column{.7\linewidth}
-		\begin{itemize}
-			\item<1-> Created in 2017 in France
-			\item<1-> \textit{https://g1.duniter.fr/\#/app/currency/lg}
-			\item<2-> Has a lot of 
-particularities
-			\item<3-> Two types of accounts: \textit{"members"} and \textit{"anonymous"}
-			\item<4-> About 2300 identified members (Oct. 2019)
-			\item<5-> \textbf{1 member = 1 real living human being}
-			\item<6-> Members are identified through a \textit{Web of Trust} (WoT) mechanism
-			\item<7-> A link in the WoT = a \textit{certification}
-		\end{itemize}
-		\column{.3\linewidth}
-			\begin{figure}
-				\includegraphics[width=.5\linewidth]{./figures/g1_logo}
-			\end{figure}
-			\onslide<6->{
+	\frametitle{The $\tilde{G}1$ crypto-currency - \textbf{Transactions}}
+	\onslide<1->{\textbf{Enables transactions between members}}
+	\medskip
+	\only<2>{\\{\small A transaction $\left(t,u,v\right) $: \textit{Entity $u$ sends money to entity $v$ at time $t$}.\\Transaction link stream: $ \mathcal{T} = \left( T, V, E_{\mathcal{T}} \right) $}}
+	\only<3>{
+		\begin{center}
+			$T = \left[0,5\right]$, $V = \left\{a,b,c,d\right\}$
+		\end{center}
+	}
+	\only<4>{
+		\begin{center}
+			No dynamics on the nodes
+		\end{center}
+	}
+	\only<5>{
+		\begin{center}
+			$\left(0,c,b\right)$
+		\end{center}
+	}
+	\only<6>{
+		\begin{center}
+			$\left(1,a,b\right),\left(1,d,c\right)$
+		\end{center}
+	}
+	\only<7>{
+		\begin{center}
+			$\left(2,d,a\right)$
+		\end{center}
+	}
+	\only<8>{
+		\begin{center}
+			$\left(4,a,d\right),\left(4,b,a\right)$
+		\end{center}
+	}
+	\only<9>{
+		\begin{center}
+			$\left(5,b,a\right),\left(5,b,c\right)$
+		\end{center}
+	}
+	\only<10>{
+		\begin{center}
+			$E_{\mathcal{T},1}=\left\{ \left(a,b\right), \left(d,c\right) \right\}$
+		\end{center}
+	}
+	\only<11>{
+		\begin{center}
+			$E_{\mathcal{T},3}=\emptyset$
+		\end{center}
+	}
+	\begin{center}
+		\begin{figure}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-0}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-1}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-2}}
+			\only<6>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-3}}
+			\only<7>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-4}}
+			\only<8>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-5}}
+			\only<9>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-6}}
+			\only<10>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-7}}
+			\only<11>{\includegraphics[width=\linewidth]{./figures/animation_transaction/transaction-8}}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{The $\tilde{G}1$ crypto-currency - \textbf{Certifications}}
+	\onslide<1->{\textbf{Identification of the members with a Web of Trust mechanism}}
+	\medskip
+	\only<2>{\\{\small A certification $\left(t,u,v\right) $: \textit{Member $u$ certifies identity of member $v$ at time $t$}.\\Certification link stream: $ \mathcal{C} = \left( T, V, E_{\mathcal{C}} \right) $}}
+	\only<3>{
+		\begin{center}
+			$T = \left[0,5\right]$, $V = \left\{a,b,c,d\right\}$
+		\end{center}
+	}
+	\only<4>{
+		\begin{columns}
+		\column{.5\textwidth}
+			\begin{center}
+				$\left(0,b,c\right)$
+			\end{center}
+		\column{.5\textwidth}
+			\begin{center}
 				\begin{figure}
-					\includegraphics[width=.7\linewidth]{./figures/wot}
-				\end{figure}}
+					\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-1}
+				\end{figure}
+			\end{center}
 		\end{columns}
-		\only<8>{
-		\bigskip
-		\textbf{We have a dynamic network of social ties and financial transactions between identified human beings!}}	
-\end{frame}
-
-
-%------------------------------------------------
-\subsection{Objectives of this work}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Objectives of this work}
-	\begin{itemize}
-		\item<1-> Study the interplay between transactions and social ties
-		\item<2-> Are my transaction partners the same
-as my friends?
-		\item<3-> Do transactions precede social ties or vice-versa?
-		\item<4-> How do my friends exchange between them compared to my transaction partners?
-		\item<5-> Are my friends and transaction partners more and more homogeneous over time?
-		\item<6-> \textbf{Show how stream graphs can be used to gain insight on such questions}	 
-	\end{itemize}
-\end{frame}
-
-
-
-%------------------------------------------------
-\section{Approach}
-%------------------------------------------------
-
-\begin{frame}
-	\Huge{\centerline{Approach}}
-\end{frame}
-
-%------------------------------------------------
-\subsection{Data}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{What does the \textbf{data} look like?}
-	\begin{itemize}
-		\item<1-> Extract from the blockchain a stream of transactions $\mathcal{T}$ and a stream of certifications $\mathcal{C}$.
-		\item<2-> A transaction $\left(t,u,v,a\right) \in \mathcal{T}$: \textit{Entity $u$ sends amount $a$ to entity $v$ at time $t$}.
-		\item<3-> A certification $\left(t,u,v\right) \in \mathcal{C}$: \textit{Member $u$ certifies the identity of members $v$ at time $t$}.
-	\end{itemize}
-\end{frame}
-
-%------------------------------------------------
-\subsection{Stream Graphs}
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Approach}
-	\only<1>{data: sequence of $\left(t,u,v\right)$}
-	\only<2>{Aggregate interactions: lose structure}
-	\only<3>{Aggregate time: lose dynamics/ordering}
-	\only<4>{Other \textit{"in-between"} approaches also have drawbacks...}
-	\only<5>{Solution: Model keeping both structure and time: \textbf{Stream Graphs}!}
+	}
+	\only<5>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(2,a,b\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-2}
+			\end{figure}
+		\end{center}
+	\end{columns}
+	}
+	\only<6>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(3,d,a\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-3}
+			\end{figure}
+		\end{center}
+	\end{columns}
+	}
+	\only<7>{
+	\begin{columns}
+	\column{.5\textwidth}
+		\begin{center}
+			$\left(4,d,c\right)$
+		\end{center}
+	\column{.5\textwidth}
+		\begin{center}
+			\begin{figure}
+				\includegraphics[width=.2\linewidth]{./figures/animation_wot/wot-4}
+			\end{figure}
+		\end{center}
+	\end{columns}
+		}
+	\only<8>{
+		\begin{center}
+			$E_{\mathcal{C},1}=\left\{ \left(b,c\right) \right\}$
+		\end{center}
+	}
+	\only<9>{
+		\begin{center}
+			$E_{\mathcal{C},5}=\left\{ \left(b,c\right),\left(a,b\right),\left(d,a\right),\left(d,c\right)\right\}$
+		\end{center}
+	}
 	\begin{center}
 		\begin{figure}
-			\only<1>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_stream_only.png}}
-			\only<2>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_signal_only.png}}
-			\only<3>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_graph_only.png}}
-			\only<4>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal}}
-			\only<5>{\includegraphics[width=\linewidth]{./figures/stream_graph_signal_final}}
+			\only<3>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-0}}
+			\only<4>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-1}}
+			\only<5>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-2}}
+			\only<6>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-3}}
+			\only<7>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-4}}
+			\only<8>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-5}}
+			\only<9>{\includegraphics[width=\linewidth]{./figures/animation_certification/certification-6}}
 		\end{figure}
-	\end{center}
+	\end{center}	
 \end{frame}
 
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Stream Graphs}
-	\begin{center}
-		\only<1>{$ S = \left(T,V,W,E\right) $}
-		\only<2>{$T$: Set of time instants}
-		\only<3>{$V$: Set of nodes}
-		\only<4>{$W \subseteq T \times V$: Set of temporal nodes}
-		\only<5>{$E \subseteq T \times V \otimes V$: Set of link}
-		\begin{figure}
-			\only<1>{\includegraphics[width=.9\linewidth]{./figures/stream_graph}}
-			\only<2>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_T}}
-			\only<3>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_V}}
-			\only<4>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_W}}
-			\only<5>{\includegraphics[width=.9\linewidth]{./figures/stream_graph_E}}
-		\end{figure}
-	\end{center}
-\end{frame}
-
-%------------------------------------------------
-
-\begin{frame}
-	\frametitle{Why is this useful?}	
+	\frametitle{Why is this great?}
+	{\footnotesize We have a dynamic network of \textbf{social ties} and \textbf{financial transactions} between \textbf{identified human beings}!}
 	\begin{center}
 		\begin{figure}
-			\includegraphics[width=.8\linewidth]{./figures/stream_unification}
+			\includegraphics[width=.8\linewidth]{./figures/animation_dt/deltat-certif-0.png}
 		\end{figure}
 	\end{center}
 \end{frame}
@@ -324,10 +369,10 @@ as my friends?
 	\frametitle{Time between transactions and certifications - \textbf{Method}}
 	\begin{center}
 		\begin{figure}
-			\only<1>{\includegraphics[width=.9\linewidth]{./figures/delta-t-0.png}}
-			\only<2>{\includegraphics[width=.9\linewidth]{./figures/delta-t-1.png}}
-			\only<3>{\includegraphics[width=.9\linewidth]{./figures/delta-t-2.png}}
-			\only<4>{\includegraphics[width=.9\linewidth]{./figures/delta-t-3.png}}
+			\only<1>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-certif-0.png}}
+			\only<2>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-certif-1.png}}
+			\only<3>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-certif-2.png}}
+			\only<4>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-certif-3.png}}
 		\end{figure}
 	\end{center}
 \end{frame}
@@ -339,10 +384,10 @@ as my friends?
 	\frametitle{Time between transactions and certifications - \textbf{Method}}
 	\begin{center}
 		\begin{figure}
-			\only<1>{\includegraphics[width=.9\linewidth]{./figures/delta-t-0.png}}
-			\only<2>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-1.png}}
-			\only<3>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-2.png}}
-			\only<4>{\includegraphics[width=.9\linewidth]{./figures/delta-tt-3.png}}
+			\only<1>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-certif-0.png}}
+			\only<2>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-trans-1.png}}
+			\only<3>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-trans-2.png}}
+			\only<4>{\includegraphics[width=.9\linewidth]{./figures/animation_dt/deltat-trans-3.png}}
 		\end{figure}
 	\end{center}
 \end{frame}
@@ -387,7 +432,7 @@ as my friends?
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Reciprocity - \textbf{K-Closures} - Ex: 2-closure}
+	\frametitle{Reciprocity - \textbf{K-Closures} of links - Ex: 2-closure}
 	\begin{center}
 		\begin{figure}
 			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
@@ -401,7 +446,7 @@ as my friends?
 %------------------------------------------------
 
 \begin{frame}
-	\frametitle{Reciprocity - \textbf{K-Closures} - Ex: 3-closure}
+	\frametitle{Reciprocity - \textbf{K-Closures} of links - Ex: 3-closure}
 	\begin{center}
 		\begin{figure}
 			\only<1>{\includegraphics[width=\linewidth]{./figures/2-closure-0}}
@@ -418,8 +463,27 @@ as my friends?
 \begin{frame}
 	\frametitle{Reciprocity - \textbf{Results}}
 	\begin{figure}
-		\includegraphics[width=\linewidth]{./figures/2-and-3-closures}
+		\includegraphics[width=.8\linewidth]{./figures/2-and-3-closures-2}
 	\end{figure}
+\end{frame}
+
+%------------------------------------------------
+\section{Conclusion}
+%------------------------------------------------
+
+\begin{frame}
+	\frametitle{Conclusion and Takeaways}
+	\begin{itemize}
+		\item $\tilde{G}1$ offers a \textbf{unique dataset} to study the interplay between \textbf{social ties and transactions}
+		\item The data is naturally well modeled by \textbf{stream graphs}
+	\end{itemize}
+	\medskip
+	\begin{itemize}
+		\item Members tend to certify people they never make transactions with
+		\item But they tend to make transactions with people they are socially connected to
+		\item When an interaction occurs in both streams, there is a clear time proximity
+		\item Interactions tend to become reciprocal in short periods of time
+	\end{itemize}
 \end{frame}
 
 %------------------------------------------------
